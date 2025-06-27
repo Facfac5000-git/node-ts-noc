@@ -11,6 +11,7 @@ Node-NOC es una aplicación de monitoreo de servicios web construida con TypeScr
 - Configuración flexible mediante variables de entorno
 - Arquitectura modular y escalable
 - Soporte para múltiples fuentes de datos (FileSystem, InMemory, Database)
+- Notificaciones por correo electrónico con los logs del sistema
 
 ## Estructura del Proyecto
 
@@ -23,6 +24,7 @@ src/
 ├── infrastructure/   # Implementaciones concretas
 │   └── datasources/  # Implementaciones de fuentes de datos
 ├── presentation/     # Capa de presentación
+│   ├── email/        # Servicio de email
 │   └── server.ts     # Servidor principal
 └── config/          # Configuración
     └── plugin/      # Plugins de configuración
@@ -58,6 +60,7 @@ El servidor iniciará un job cron que verificará periódicamente los servicios 
 - `PORT`: Puerto del servidor (default: 3000)
 - `MAILER_EMAIL`: Email para notificaciones
 - `MAILER_SECRET_KEY`: Clave secreta para el mailer
+- `MAILER_SERVICE`: Servicio de correo a utilizar (ej. gmail)
 - `PROD`: Modo producción (true/false)
 
 ## Licencia
