@@ -4,3 +4,7 @@ logs/
 
 .DS_Store
 .env
+
+.data
+
+./src/generated/prisma
